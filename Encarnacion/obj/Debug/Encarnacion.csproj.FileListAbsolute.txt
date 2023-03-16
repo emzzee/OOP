@@ -1,0 +1,10 @@
+C:\Users\USER11\source\repos\Encarnacion\bin\Debug\Encarnacion.exe.config
+C:\Users\USER11\source\repos\Encarnacion\bin\Debug\Encarnacion.exe
+C:\Users\USER11\source\repos\Encarnacion\bin\Debug\Encarnacion.pdb
+C:\Users\USER11\source\repos\Encarnacion\obj\Debug\Encarnacion.csproj.AssemblyReference.cache
+C:\Users\USER11\source\repos\Encarnacion\obj\Debug\Encarnacion.Form1.resources
+C:\Users\USER11\source\repos\Encarnacion\obj\Debug\Encarnacion.Properties.Resources.resources
+C:\Users\USER11\source\repos\Encarnacion\obj\Debug\Encarnacion.csproj.GenerateResource.cache
+C:\Users\USER11\source\repos\Encarnacion\obj\Debug\Encarnacion.csproj.CoreCompileInputs.cache
+C:\Users\USER11\source\repos\Encarnacion\obj\Debug\Encarnacion.exe
+C:\Users\USER11\source\repos\Encarnacion\obj\Debug\Encarnacion.pdb
