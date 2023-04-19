@@ -53,6 +53,20 @@
         {
             int indexRow = e.RowIndex;
             DataGridViewRow row = dgv.Rows[indexRow];
+            using (var command = new SqlCommand("SELECT * FROM Products"))
+            {
+                var msg = new List<string>();
 
-            idtext = row.Cells[0.Value.ToString();
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+
+                        while (reader.NextResult())
+                        {
+                            idtext = Convert.ToInt32(reader["id"]);
+                        }
+                    }
+                }
+            }
         }
