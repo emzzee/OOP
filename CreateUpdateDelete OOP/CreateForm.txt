@@ -1,0 +1,21 @@
+ private void create_Click(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection(connectionstring);
+
+            
+            string txtname = tbname.Text;
+            string txtprice = tbprice.Text;
+            int txtstocks = Convert.ToInt32(tbstocks.Text);
+            int txtunits = Convert.ToInt32(tbunits.Text);
+            string txtcategory = cbcategory.Text;
+
+            string querry = "INSERT INTO Products VALUES ('"+ txtname + "', '" + txtprice + "'" +
+                ",'" + txtstocks + "','" + txtunits + "','" + txtcategory + "')";
+
+            connection.Open();
+            SqlCommand cmd = new SqlCommand(querry, connection);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Record Inserted Successfully!");
+            this.Close();
+        }

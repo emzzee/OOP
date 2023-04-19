@@ -1,0 +1,42 @@
+ public updateform(string srchbar)
+        {
+            InitializeComponent();
+            string searchbar = srchbar;
+            tbname.Text = searchbar;
+        }
+
+        private void updateform_Load(object sender, EventArgs e)
+        {
+            string q = "SELECT * FROM Products WHERE name='" + tbname.Text+ "'";
+            SqlConnection Conn = new SqlConnection(connectionstring);
+            SqlCommand Comm = new SqlCommand(q, Conn);
+            Conn.Open();
+            SqlDataReader dataread = Comm.ExecuteReader();
+            if (dataread.Read())
+            {
+                tbid.Text = dataread.GetValue(0).ToString();
+                tbname.Text = dataread.GetValue(1).ToString();
+                tbprice.Text = dataread.GetValue(2).ToString();
+                tbstocks.Text = dataread.GetValue(3).ToString();
+                tbunits.Text = dataread.GetValue(4).ToString();
+                cbcategory.Text = dataread.GetValue(5).ToString();
+            }
+            Conn.Close();
+        }
+
+	private void update_Click(object sender, EventArgs e)
+	{
+		cmd = new SqlCommand("update Products set Name=@NAME,Price=@PRICE,Stocks=@STOCK,Units=@UNITS,Category=@CATEGORY where Id=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@Id", this.dataGridView1.CurrentRow.Cells[0].Value);
+                cmd.Parameters.AddWithValue("@NAME", this.dataGridView1.CurrentRow.Cells[1].Value);
+                cmd.Parameters.AddWithValue("@PRICE", this.dataGridView1.CurrentRow.Cells[2].Value);
+                cmd.Parameters.AddWithValue("@STOCK", this.dataGridView1.CurrentRow.Cells[3].Value);
+                cmd.Parameters.AddWithValue("@UNITS", this.dataGridView1.CurrentRow.Cells[4].Value);
+                cmd.Parameters.AddWithValue("@CATEGORY", this.dataGridView1.CurrentRow.Cells[5].Value);
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Successfully Updated!!!", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con.Close();
+	}
