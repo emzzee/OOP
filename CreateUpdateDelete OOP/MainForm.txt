@@ -1,4 +1,13 @@
-	public void RefreshData()
+public partial class MainForm : Form
+    {
+        public string connectionstring = "";
+
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+
+        public void RefreshData()
         {
             string sql = "SELECT * FROM Products";
             SqlConnection connection = new SqlConnection(connectionstring);
@@ -12,61 +21,46 @@
             connection.Close();
         }
 
-        private void productform_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             RefreshData();
         }
 
-        private void create_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
             CreateForm createform = new CreateForm();
             createform.ShowDialog();
             RefreshData();
         }
 
-        public void update_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            UpdateForm updateform = new UpdateForm(idtext);
+            UpdateForm updateform = new UpdateForm(Convert.ToInt32(tbid.Text));
             updateform.ShowDialog();
             RefreshData();
         }
 
-        private void delete_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure you want to delete", "Record deleted successfully!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to delete", "Record deleted successfully!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 SqlConnection connection = new SqlConnection(connectionstring);
-                string q = "DELETE FROM Products WHERE name='" + tbID.Text + "'";
+                string q = "DELETE FROM Products WHERE id='" + tbid.Text + "'";
 
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(q, connection);
                 cmd.ExecuteNonQuery();
-                tbID.Clear();
                 connection.Close();
-                DisplayData();
+                RefreshData();
             }
         }
-
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int indexRow = e.RowIndex;
             DataGridViewRow row = dgv.Rows[indexRow];
-            using (var command = new SqlCommand("SELECT * FROM Products"))
-            {
-                var msg = new List<string>();
 
-                using (var reader = command.ExecuteReader())
-                {
-                    if (reader.HasRows)
-                    {
+            tbid.Text = row.Cells[0].Value.ToString();
 
-                        while (reader.NextResult())
-                        {
-                            idtext = Convert.ToInt32(reader["id"]);
-                        }
-                    }
-                }
-            }
+
         }
