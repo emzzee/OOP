@@ -1,13 +1,18 @@
- public updateform(string srchbar)
+public partial class UpdateForm : Form
+    {
+        public string connectionstring = "";
+        public string searchbar;
+        
+        public UpdateForm(int srchbar)
         {
             InitializeComponent();
-            string searchbar = srchbar;
-            tbname.Text = searchbar;
+            searchbar = srchbar.ToString();
+            tbid.Text = searchbar;
         }
 
-        private void updateform_Load(object sender, EventArgs e)
+        private void UpdateForm_Load(object sender, EventArgs e)
         {
-            string q = "SELECT * FROM Products WHERE name='" + tbname.Text+ "'";
+            string q = "SELECT * FROM Products WHERE id='" + tbid.Text + "'";
             SqlConnection Conn = new SqlConnection(connectionstring);
             SqlCommand Comm = new SqlCommand(q, Conn);
             Conn.Open();
@@ -24,19 +29,25 @@
             Conn.Close();
         }
 
-	private void update_Click(object sender, EventArgs e)
-	{
-		cmd = new SqlCommand("update Products set Name=@NAME,Price=@PRICE,Stocks=@STOCK,Units=@UNITS,Category=@CATEGORY where Id=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@Id", this.dataGridView1.CurrentRow.Cells[0].Value);
-                cmd.Parameters.AddWithValue("@NAME", this.dataGridView1.CurrentRow.Cells[1].Value);
-                cmd.Parameters.AddWithValue("@PRICE", this.dataGridView1.CurrentRow.Cells[2].Value);
-                cmd.Parameters.AddWithValue("@STOCK", this.dataGridView1.CurrentRow.Cells[3].Value);
-                cmd.Parameters.AddWithValue("@UNITS", this.dataGridView1.CurrentRow.Cells[4].Value);
-                cmd.Parameters.AddWithValue("@CATEGORY", this.dataGridView1.CurrentRow.Cells[5].Value);
+        private void update_Click(object sender, EventArgs e)
+        {
+            int txtid = Convert.ToInt32(tbid.Text);
+            string txtname = tbname.Text;
+            int txtprice = Convert.ToInt32(tbprice.Text);
+            int txtstocks = Convert.ToInt32(tbstocks.Text);
+            int txtunits = Convert.ToInt32(tbunits.Text);
+            string txtcategory = cbcategory.Text;
 
+            SqlConnection connection = new SqlConnection(connectionstring);
+            string querry = "UPDATE Products SET name ='" + txtname + "', price ='" + txtprice + "'" +
+                ", stocks ='" + txtstocks + "',units ='" + txtunits + "',category ='" + txtcategory + "' " +
+                "WHERE id = '" + txtid + "'";
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Data Successfully Updated!!!", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                con.Close();
-	}
+            connection.Open();
+            SqlCommand cmd = new SqlCommand(querry, connection);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Record Inserted Successfully!");
+            this.Close();
+        }
+    }
