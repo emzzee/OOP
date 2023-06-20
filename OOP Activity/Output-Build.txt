@@ -1,0 +1,6 @@
+﻿Build started...
+1>------ Build started: Project: OOP Activity, Configuration: Debug Any CPU ------
+1>C:\Users\asus\source\repos\OOP Activity\Form1.cs(55,33,55,39): error CS7036: There is no argument given that corresponds to the required formal parameter 'srchbar' of 'UPDATE.UPDATE(string)'
+1>C:\Users\asus\source\repos\OOP Activity\updatefrm.Designer.cs(78,66,78,81): error CS1061: 'UPDATE' does not contain a definition for 'btnupdate_Click' and no accessible extension method 'btnupdate_Click' accepting a first argument of type 'UPDATE' could be found (are you missing a using directive or an assembly reference?)
+1>C:\Users\asus\source\repos\OOP Activity\updatefrm.Designer.cs(176,55,176,66): error CS1061: 'UPDATE' does not contain a definition for 'UPDATE_Load' and no accessible extension method 'UPDATE_Load' accepting a first argument of type 'UPDATE' could be found (are you missing a using directive or an assembly reference?)
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========

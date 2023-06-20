@@ -1,0 +1,39 @@
+C:\Users\asus\source\repos\OOP Activity\bin\Debug\OOP Activity.exe.config
+C:\Users\asus\source\repos\OOP Activity\bin\Debug\OOP Activity.exe
+C:\Users\asus\source\repos\OOP Activity\bin\Debug\OOP Activity.pdb
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP Activity.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.createfrm.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.Form1.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.Properties.Resources.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.UPDATE.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP Activity.csproj.GenerateResource.cache
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP Activity.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP Activity.exe
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP Activity.pdb
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.Form2.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.AddStocks.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.CategoryForm.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.HistoryForm.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.CreateCategory.resources
+C:\Users\asus\source\repos\OOP Activity\obj\Debug\OOP_Activity.UpdateCategory.resources
+C:\Users\mjenc\source\repos\OOP Activity\bin\Debug\OOP Activity.exe.config
+C:\Users\mjenc\source\repos\OOP Activity\bin\Debug\OOP Activity.exe
+C:\Users\mjenc\source\repos\OOP Activity\bin\Debug\OOP Activity.pdb
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP Activity.csproj.AssemblyReference.cache
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.CreateCategory.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.AddStocks.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.CategoryForm.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.Form2.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.HistoryForm.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.createfrm.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.Form1.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.Properties.Resources.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.UPDATE.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.UpdateCategory.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP Activity.csproj.GenerateResource.cache
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP Activity.csproj.CoreCompileInputs.cache
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP Activity.exe
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP Activity.pdb
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.Details.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.Product.resources
+C:\Users\mjenc\source\repos\OOP Activity\obj\Debug\OOP_Activity.Transaction.resources
